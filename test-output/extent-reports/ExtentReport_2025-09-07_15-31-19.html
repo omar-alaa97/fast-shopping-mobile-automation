@@ -1,0 +1,998 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Fast Shopping Mobile App - Test Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Mobile Automation Test Results</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">2025-09-07 15:31:19</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testCreateListMarkCompleteAndArchive</p>
+            <p class="text-sm">
+              <span>3:31:20 PM</span> / <span>00:01:32:377</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testCreateListMarkCompleteAndArchive</h5>
+<span class='badge badge-success'>09.07.2025 3:31:20 PM</span>
+<span class='badge badge-danger'>09.07.2025 3:32:52 PM</span>
+<span class='badge badge-default'>00:01:32:377</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:27 PM</td>
+        <td>
+          Driver initialized successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:27 PM</td>
+        <td>
+          Test started: testCreateListMarkCompleteAndArchive
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:28 PM</td>
+        <td>
+          Navigating from initial state to shopping lists
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:29 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: No list selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:31 PM</td>
+        <td>
+          Initialized page objects and navigated to shopping lists
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:31 PM</td>
+        <td>
+          Starting Test Scenario 1: Create → Add Items → Mark Complete → Archive
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:42 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: NEW LIST
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:46 PM</td>
+        <td>
+          Clicked on element: By.xpath: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:47 PM</td>
+        <td>
+          Entered text 'TestList_660' in element: By.xpath: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:47 PM</td>
+        <td>
+          Creating new list with name: TestList_660
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:49 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: ADD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:51 PM</td>
+        <td>
+          Successfully created list: TestList_660
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:51 PM</td>
+        <td>
+          Created list: TestList_660
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:51 PM</td>
+        <td>
+          Adding 3 random items
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:51 PM</td>
+        <td>
+          Adding item: Item_868
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:52 PM</td>
+        <td>
+          Clicked on element: By.xpath: (//android.widget.Button)[2]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:55 PM</td>
+        <td>
+          Entered text 'Item_868' in element: AppiumBy.className: android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:57 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: ADD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:31:59 PM</td>
+        <td>
+          Successfully added item: Item_868
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:59 PM</td>
+        <td>
+          Adding item: Item_135
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:31:59 PM</td>
+        <td>
+          Clicked on element: By.xpath: (//android.widget.Button)[2]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:03 PM</td>
+        <td>
+          Entered text 'Item_135' in element: AppiumBy.className: android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:04 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: ADD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:07 PM</td>
+        <td>
+          Successfully added item: Item_135
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:07 PM</td>
+        <td>
+          Adding item: Item_834
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:07 PM</td>
+        <td>
+          Clicked on element: By.xpath: (//android.widget.Button)[2]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:11 PM</td>
+        <td>
+          Entered text 'Item_834' in element: AppiumBy.className: android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:12 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: ADD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:14 PM</td>
+        <td>
+          Successfully added item: Item_834
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:14 PM</td>
+        <td>
+          Successfully added 3 random items
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:14 PM</td>
+        <td>
+          Added 3 items to the list
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:34 PM</td>
+        <td>
+          Total items count: 3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:34 PM</td>
+        <td>
+          Marking all items as completed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:43 PM</td>
+        <td>
+          Successfully marked all items as completed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:43 PM</td>
+        <td>
+          Marked all items as completed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:43 PM</td>
+        <td>
+          Archive dialog appeared - archiving the list
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:43 PM</td>
+        <td>
+          Archiving the list
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:44 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: ARCHIVE
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:46 PM</td>
+        <td>
+          Successfully archived the list
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:46 PM</td>
+        <td>
+          Navigating from initial state to shopping lists
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:47 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: No list selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:49 PM</td>
+        <td>
+          Clicking on Archived tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:50 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: Archived
+Tab 2 of 2
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:52 PM</td>
+        <td>
+          Test Scenario 1 completed successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:32:52 PM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testCreateListEditAndRemoveItems</p>
+            <p class="text-sm">
+              <span>3:32:52 PM</span> / <span>00:01:55:276</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testCreateListEditAndRemoveItems</h5>
+<span class='badge badge-success'>09.07.2025 3:32:52 PM</span>
+<span class='badge badge-danger'>09.07.2025 3:34:48 PM</span>
+<span class='badge badge-default'>00:01:55:276</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:58 PM</td>
+        <td>
+          Driver initialized successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:32:58 PM</td>
+        <td>
+          Test started: testCreateListEditAndRemoveItems
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:00 PM</td>
+        <td>
+          Navigating from initial state to shopping lists
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:01 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: No list selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:03 PM</td>
+        <td>
+          Initialized page objects and navigated to shopping lists
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:03 PM</td>
+        <td>
+          Starting Test Scenario 2: Create → Add Items → Edit → Remove
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:14 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: NEW LIST
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:17 PM</td>
+        <td>
+          Clicked on element: By.xpath: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:18 PM</td>
+        <td>
+          Entered text 'TestList_762' in element: By.xpath: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:18 PM</td>
+        <td>
+          Creating new list with name: TestList_762
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:20 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: ADD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:22 PM</td>
+        <td>
+          Successfully created list: TestList_762
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:22 PM</td>
+        <td>
+          Created list: TestList_762
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:22 PM</td>
+        <td>
+          Adding 4 random items
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:22 PM</td>
+        <td>
+          Adding item: Item_914
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:23 PM</td>
+        <td>
+          Clicked on element: By.xpath: (//android.widget.Button)[2]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:26 PM</td>
+        <td>
+          Entered text 'Item_914' in element: AppiumBy.className: android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:28 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: ADD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:30 PM</td>
+        <td>
+          Successfully added item: Item_914
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:30 PM</td>
+        <td>
+          Adding item: Item_410
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:30 PM</td>
+        <td>
+          Clicked on element: By.xpath: (//android.widget.Button)[2]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:34 PM</td>
+        <td>
+          Entered text 'Item_410' in element: AppiumBy.className: android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:35 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: ADD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:37 PM</td>
+        <td>
+          Successfully added item: Item_410
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:37 PM</td>
+        <td>
+          Adding item: Item_997
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:38 PM</td>
+        <td>
+          Clicked on element: By.xpath: (//android.widget.Button)[2]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:41 PM</td>
+        <td>
+          Entered text 'Item_997' in element: AppiumBy.className: android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:43 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: ADD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:45 PM</td>
+        <td>
+          Successfully added item: Item_997
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:45 PM</td>
+        <td>
+          Adding item: Item_967
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:46 PM</td>
+        <td>
+          Clicked on element: By.xpath: (//android.widget.Button)[2]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:50 PM</td>
+        <td>
+          Entered text 'Item_967' in element: AppiumBy.className: android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:51 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: ADD
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:53 PM</td>
+        <td>
+          Successfully added item: Item_967
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:33:53 PM</td>
+        <td>
+          Successfully added 4 random items
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:33:53 PM</td>
+        <td>
+          Added 4 items to the list
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:03 PM</td>
+        <td>
+          Total items count: 4
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:03 PM</td>
+        <td>
+          Clicking on item: Item_914
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:14 PM</td>
+        <td>
+          Clicked on element: AppiumBy.androidUIAutomator: new UiSelector().descriptionContains("Item")
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:16 PM</td>
+        <td>
+          Item actions displayed - editing item
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:16 PM</td>
+        <td>
+          Editing current item to: EditedItem_365
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:17 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: EDIT
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:21 PM</td>
+        <td>
+          Entered text 'EditedItem_365' in element: AppiumBy.className: android.widget.EditText
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:22 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: SAVE
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:34:24 PM</td>
+        <td>
+          Successfully edited item to: EditedItem_365
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:34 PM</td>
+        <td>
+          Total items count: 4
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:34 PM</td>
+        <td>
+          Item actions displayed - removing item
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:34 PM</td>
+        <td>
+          Removing current item
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:36 PM</td>
+        <td>
+          Clicked on element: AppiumBy.accessibilityId: REMOVE
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:34:38 PM</td>
+        <td>
+          Successfully removed item
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:48 PM</td>
+        <td>
+          Total items count: 3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:34:48 PM</td>
+        <td>
+          Test Scenario 2 completed successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:34:48 PM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>2025-09-07 15:31:19</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>2025-09-07 15:34:49</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>2</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>2</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='19%'><b>19</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>79</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"testCreateListMarkCompleteAndArchive":92.377,"testCreateListEditAndRemoveItems":115.276
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Application</td>
+<td>Fast Shopping Mobile App</td>
+</tr>
+<tr>
+<td>Test Framework</td>
+<td>Appium + TestNG</td>
+</tr>
+<tr>
+<td>Platform</td>
+<td>Android</td>
+</tr>
+<tr>
+<td>Automation Engineer</td>
+<td>Test Automation Team</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>Test</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>19.0.1</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Windows 11</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 2,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 19,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 79
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

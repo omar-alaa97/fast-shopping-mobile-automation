@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Fast Shopping Mobile Automation Suite" parallel="false" thread-count="1">
+
+    <parameter name="platform" value="Android"/>
+    <parameter name="deviceName" value="Android Emulator"/>
+
+    <listeners>
+        <listener class-name="com.automation.listeners.ExtentReportListener"/>
+        <listener class-name="com.automation.listeners.ScreenshotListener"/>
+    </listeners>
+
+    <test name="Shopping List Tests" preserve-order="true">
+        <classes>
+            <class name="com.automation.tests.ShoppingListTest">
+                <methods>
+                    <include name="testCreateListMarkCompleteAndArchive"/>
+                    <include name="testCreateListEditAndRemoveItems"/>
+                   <!-- <include name="testCreateListRemoveAllAndUndo"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+   </suite>
