@@ -1,7 +1,6 @@
 package com.automation.pages;
 
 import com.automation.base.BaseTest;
-import com.automation.utils.WaitUtils;
 import org.openqa.selenium.By;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.WebElement;
@@ -12,13 +11,11 @@ public class ListItemsPage extends BasePage {
 
     // Main screen elements
     private final By appTitle = AppiumBy.accessibilityId("Fast Shopping");
-    private final By menuButton = AppiumBy.accessibilityId("Show menu");
 
     // Empty list state 
     private final By emptyListMessage = AppiumBy.accessibilityId("Add some items to your list!");
     private final By addItemFab = AppiumBy.xpath("(//android.widget.Button)[2]"); // The + button
-    private final By bottomListName = AppiumBy.androidUIAutomator(
-            "new UiSelector().textMatches(\"TestList.*\")");
+
 
     // Add item dialog
     private final By addItemDialog = AppiumBy.accessibilityId("Add item");
@@ -40,18 +37,13 @@ public class ListItemsPage extends BasePage {
     // Item actions
     private final By removeButton = AppiumBy.accessibilityId("REMOVE");
     private final By editButton = AppiumBy.accessibilityId("EDIT");
-    private final By completedItemText = AppiumBy.accessibilityId("//*[@text='done a moment ago']");
     // Undo functionality
-    private final By undoSnackbar = AppiumBy.accessibilityId("//*[@text='Item has been removed from the list.']");
-    private final By undoButton = AppiumBy.accessibilityId("//android.widget.Button[@text='UNDO']");
+    private final By undoSnackbar = AppiumBy.accessibilityId("Item has been removed from the list.");
+    private final By undoButton = AppiumBy.accessibilityId("UNDO");
 
     // Dynamic locators
     private By getItemByName(String itemName) {
         return AppiumBy.accessibilityId("//android.widget.TextView[@text='" + itemName + "']");
-    }
-
-    private By getItemCheckboxByName(String itemName) {
-        return AppiumBy.accessibilityId("//android.widget.TextView[@text='" + itemName + "']/preceding-sibling::android.widget.CheckBox");
     }
 
     /**
@@ -207,16 +199,6 @@ public class ListItemsPage extends BasePage {
     }
 
     /**
-     * Get the current list name from bottom text
-     */
-    public String getListName() {
-        if (isElementDisplayed(bottomListName)) {
-            return getText(bottomListName);
-        }
-        return "Unknown List";
-    }
-
-    /**
      * Get all items in the list
      */
     public List<WebElement> getAllItems() {
@@ -256,21 +238,6 @@ public class ListItemsPage extends BasePage {
     }
 
     /**
-     * Check if item is marked as completed
-     */
-    public boolean isItemCompleted(String itemName) {
-        // Check if the item has completed styling or if checkbox is checked
-        By checkboxLocator = getItemCheckboxByName(itemName);
-        if (isElementDisplayed(checkboxLocator)) {
-            WebElement checkbox = getElements(checkboxLocator).get(0);
-            return checkbox.isSelected();
-        }
-
-        // Also check for "done a moment ago" text
-        return isElementDisplayed(completedItemText);
-    }
-
-    /**
      * Click UNDO button to restore removed item
      */
     public void undoRemoval() {
@@ -293,16 +260,29 @@ public class ListItemsPage extends BasePage {
     }
 
     /**
-     * Wait for undo snackbar to appear after item removal
+     * Check if specific item exists in the list
      */
-    public boolean waitForUndoSnackbar(int timeoutSeconds) {
-        BaseTest.getExtentTest().info("Waiting for undo snackbar to appear");
+    public boolean isItemPresent(String itemName) {
+        BaseTest.getExtentTest().info("Checking if item exists: " + itemName);
 
         try {
-            WaitUtils.waitForElementToBeVisible(driver, undoSnackbar, timeoutSeconds);
-            return true;
+            // Try to find the item using content-desc
+            By itemLocator = AppiumBy.androidUIAutomator(
+                    "new UiSelector().textContains(\"" + itemName + "\")"
+            );
+
+            boolean found = isElementDisplayed(itemLocator);
+
+            if (found) {
+                BaseTest.getExtentTest().info("Item found: " + itemName);
+            } else {
+                BaseTest.getExtentTest().info("Item not found: " + itemName);
+            }
+
+            return found;
+
         } catch (Exception e) {
-            BaseTest.getExtentTest().warning("Undo snackbar did not appear within " + timeoutSeconds + " seconds");
+            BaseTest.getExtentTest().warning("Error checking for item: " + itemName + " - " + e.getMessage());
             return false;
         }
     }

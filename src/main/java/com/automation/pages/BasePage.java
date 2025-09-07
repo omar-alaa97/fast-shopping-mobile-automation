@@ -18,7 +18,6 @@ public class BasePage {
 
     protected AppiumDriver driver;
     protected Random random;
-    protected String listName;
 
     public BasePage() {
         this.driver = BaseTest.getDriver();
@@ -58,15 +57,6 @@ public class BasePage {
     }
 
     /**
-     * Get text from element
-     */
-    protected String getText(By locator) {
-        String text = WaitUtils.getTextSafely(driver, locator);
-        BaseTest.getExtentTest().info("Retrieved text '" + text + "' from element: " + locator.toString());
-        return text;
-    }
-
-    /**
      * Check if element is displayed
      */
     protected boolean isElementDisplayed(By locator) {
@@ -76,13 +66,6 @@ public class BasePage {
         } catch (Exception e) {
             return false;
         }
-    }
-
-    /**
-     * Check if element is present
-     */
-    protected boolean isElementPresent(By locator) {
-        return WaitUtils.isElementPresent(driver, locator);
     }
 
     /**

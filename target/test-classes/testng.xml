@@ -9,6 +9,7 @@
     <listeners>
         <listener class-name="com.automation.listeners.ExtentReportListener"/>
         <listener class-name="com.automation.listeners.ScreenshotListener"/>
+        <listener class-name="com.automation.listeners.VideoRecordingListener"/>
     </listeners>
 
     <test name="Shopping List Tests" preserve-order="true">
@@ -17,7 +18,7 @@
                 <methods>
                     <include name="testCreateListMarkCompleteAndArchive"/>
                     <include name="testCreateListEditAndRemoveItems"/>
-                   <!-- <include name="testCreateListRemoveAllAndUndo"/>-->
+                    <include name="testCreateListRemoveItemsAndUndo"/>
                 </methods>
             </class>
         </classes>

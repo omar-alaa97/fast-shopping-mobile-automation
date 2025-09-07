@@ -23,7 +23,7 @@ Based on actual app screenshots and user flows:
 - Create a new shopping list with random items
 - Add multiple items to the list
 - Remove all items from the list
-- Handle empty list state
+- Undo Removed Item
 
 ## 🏗️ Framework Architecture
 
@@ -58,11 +58,12 @@ fast-shopping-mobile-automation/
 │   │   │   └── ExtentReportManager.java # Test reporting
 │   │   └── listeners/
 │   │       ├── ExtentReportListener.java  # Report listener
-│   │       └── ScreenshotListener.java    # Screenshot listener
+│   │       ├── ScreenshotListener.java    # Screenshot listener
+│   │       └── VideoRecordingListener.java    # Screenshot listener
 │   └── test/java/com/automation/
 │       └── tests/
 │           └── UpdatedShoppingListTest.java # Main test class
-├── test-output/               # Generated reports & screenshots
+├── test-output/               # Generated reports & screenshots & screenvideos
 ├── apps/                      # APK storage
 ├── scripts/                   # Helper scripts
 └── docs/                      # Documentation

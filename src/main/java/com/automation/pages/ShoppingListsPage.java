@@ -3,20 +3,12 @@ package com.automation.pages;
 import com.automation.base.BaseTest;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 /**
  * Page Object for Shopping Lists Screen
  * Handles: Initial state, Lists overview, Create list functionality
  */
 public class ShoppingListsPage extends BasePage {
-
-    // Main screen elements
-    private final By appTitle = AppiumBy.accessibilityId("Fast Shopping");
-    private final By menuButton = AppiumBy.accessibilityId("Show menu");
-    private final By backButton = AppiumBy.accessibilityId("Back");
 
     // Initial empty state
     private final By noListSelectedMessage = AppiumBy.accessibilityId("No list is selected, create one.");
@@ -27,14 +19,12 @@ public class ShoppingListsPage extends BasePage {
     private final By currentTab = AppiumBy.accessibilityId("Current\n" +"Tab 1 of 2");
     private final By archivedTab = AppiumBy.accessibilityId("Archived\n" +
             "Tab 2 of 2");
-    private final By noCurrentListsMessage = AppiumBy.accessibilityId("There are no current lists, create one!");
     private final By noSelectedListMessage = AppiumBy.accessibilityId("No list is selected, create one.");
     private final By newListButton = AppiumBy.accessibilityId("NEW LIST");
 
     // Create list dialog
     private final By addListDialog = AppiumBy.accessibilityId("Add new shopping list");
     private final By listNameInput = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.widget.EditText");
-    private final By cancelButton = AppiumBy.accessibilityId("CANCEL");
     private final By addButton = AppiumBy.accessibilityId("ADD");
 
     // Dynamic locators for created lists
@@ -42,9 +32,9 @@ public class ShoppingListsPage extends BasePage {
         return AppiumBy.accessibilityId(listName);
     }
 
-    private By getArchivedList(String listname){
+    private By getArchivedList(String listName){
         return AppiumBy.androidUIAutomator(
-                "new UiSelector().descriptionContains(\"" + listname + "\")"
+                "new UiSelector().descriptionContains(\"" + listName + "\")"
         );
     }
     /**
@@ -115,23 +105,6 @@ public class ShoppingListsPage extends BasePage {
     }
 
     /**
-     * Open existing list by name (this will navigate to ListItemsPage)
-     */
-    public ListItemsPage openList(String listName) {
-        BaseTest.getExtentTest().info("Opening list: " + listName);
-
-        By listLocator = getListByName(listName);
-        if (isElementDisplayed(listLocator)) {
-            click(listLocator);
-            waitForPageToLoad();
-            BaseTest.getExtentTest().pass("Successfully opened list: " + listName);
-            return new ListItemsPage();
-        } else {
-            throw new RuntimeException("List not found: " + listName);
-        }
-    }
-
-    /**
      * Check if a specific list exists
      */
     public boolean isListPresent(String listName) {
@@ -140,24 +113,10 @@ public class ShoppingListsPage extends BasePage {
     }
 
     /**
-     * Check if no current lists message is displayed
-     */
-    public boolean isNoCurrentListsMessageDisplayed() {
-        return isElementDisplayed(noCurrentListsMessage);
-    }
-
-    /**
      * Check if no selected lists message is displayed
      */
-    public boolean isNoselectedListsMessageDisplayed() {
+    public boolean isNoSelectedListsMessageDisplayed() {
         return isElementDisplayed(noSelectedListMessage);
-    }
-
-    /**
-     * Get all visible lists (you'll need to implement based on actual list structure)
-     */
-    public List<WebElement> getAllVisibleLists() {
-        return getElements(AppiumBy.accessibilityId("//android.widget.RecyclerView//android.widget.LinearLayout"));
     }
 
     public Boolean isListArchived(String listName){
